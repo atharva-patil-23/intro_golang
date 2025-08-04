@@ -12,11 +12,19 @@ func main() {
 	var numerator int = 12
 	var denominator int = 4
 	var result, remainder, err = intDivision(numerator, denominator)
-	if err != nil {
+	// if err != nil {
+	// 	fmt.Printf(err.Error())
+	// } else if remainder == 0 {
+	// 	fmt.Printf("the result of the integer division is %v", result)
+	// } else {
+	// 	fmt.Printf("The result of the integer division is %v and the remainder of the integer division is %v ", result, remainder)
+	// }
+	switch {
+	case err != nil:
 		fmt.Printf(err.Error())
-	} else if remainder == 0 {
+	case remainder == 0:
 		fmt.Printf("the result of the integer division is %v", result)
-	} else {
+	default:
 		fmt.Printf("The result of the integer division is %v and the remainder of the integer division is %v ", result, remainder)
 	}
 }
