@@ -8,15 +8,16 @@ func main() {
 
 	var numerator int = 12
 	var denominator int = 4
-	var result int = intDivision(numerator, denominator)
-	fmt.Println(result)
+	var result, remainder int = intDivision(numerator, denominator)
+	fmt.Printf("The result of the integer division is %v and the remainder of the integer division is %v ", result, remainder)
 }
 
 func printMe(printValue string) { //the opening braces should be here only otherweise go throws error
 	fmt.Println(printValue)
 }
 
-func intDivision(numerator int, denominator int) int { // the int delclared here suggest a int value is gonna be returned
+func intDivision(numerator int, denominator int) (int, int) { // the int delclared here suggest a int value is gonna be returned
 	var result int = numerator / denominator
-	return result
+	var remainder int = numerator % denominator
+	return result, remainder
 }
