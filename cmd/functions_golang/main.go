@@ -26,7 +26,7 @@ func main() {
 		fmt.Printf("the result of the integer division is %v", result)
 	default:
 		fmt.Printf("The result of the integer division is %v and the remainder of the integer division is %v ", result, remainder)
-	}
+	} // we don't have to write break explicitly for each line
 }
 
 func printMe(printValue string) { //the opening braces should be here only otherweise go throws error
