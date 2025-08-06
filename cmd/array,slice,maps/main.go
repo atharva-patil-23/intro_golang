@@ -20,5 +20,17 @@ func main() {
 
 	var intSlice []int32 = []int32{4, 5, 6}
 	fmt.Println(intSlice)
+	fmt.Println("the length is %v with capacity %v", len(intSlice), cap(intSlice))
 
+	intSlice = append(intSlice, 7) //unlike array we can append an element to the slice
+	// when we append a new element it checks if there is any space for the new element to be appended to the array , if not a new array is created with the double the original capacity
+	// but still we cannot access the new empty indexes
+	fmt.Println(intSlice)
+	fmt.Println("the length is %v with capacity %v", len(intSlice), cap(intSlice)) //here the cap shows the capacity of the array
+	//[4,5,6] => [4,5,6,7,*,*]
+	//we can't access the * we get index out of range error
+
+	var intSlice2 []int32 = []int32{8, 9}
+	intSlice = append(intSlice, intSlice2...) // we append multiple values using spread operator
+	fmt.Println(intSlice)
 }
