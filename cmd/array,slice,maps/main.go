@@ -33,4 +33,8 @@ func main() {
 	var intSlice2 []int32 = []int32{8, 9}
 	intSlice = append(intSlice, intSlice2...) // we append multiple values using spread operator
 	fmt.Println(intSlice)
+
+	var intSlice3 []int32 = make([]int32, 3, 8) //u can use make to create slicesn here 8 signifies the capacity of the slice otherwise the default capacity will be the length of the slice
+
+	fmt.Println(intSlice3)
 }
